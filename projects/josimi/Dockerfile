@@ -1,8 +1,8 @@
-
 FROM node:22-bookworm
 
-WORKDIR /app
+WORKDIR /src
 
-COPY . .
+COPY . /src
 
-RUN npm ci
+RUN npm ci --ignore-scripts
+RUN npm test
